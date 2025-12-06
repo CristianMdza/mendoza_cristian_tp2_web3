@@ -5,23 +5,23 @@
 <!----- Technique d'Intégration Multimédia ----->
 <!----------- Collège Montmorency ----------->
 <!-------------- Session d'A2025 -------------->
-
+ 
 <!-- NOTE: MES CODES SONT COMMENTÉS PAR RAPPORT AUX ÉTAPES, SECTIONS DU SITE WEB, POLICES, ETC..; DE PLUS, J'AI FAIT TROP DE TABOULATIONS ENTRE LES CODES POUR QUE ÇA SOIT PLUS PROPRE VISSIBLEMENT ET COMPREHENSIBLE. -->
-
+ 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP2 Web 3</title>
-
+    <title>Tp2 Interface - Visère Futuriste</title>
+ 
     <!-- CSS -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./src/css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.13.0/dist/maplibre-gl.css">
-
-    <!-- Importmap pour les modules JS -->
+ 
+    <!-- IMPORTMAP POUR LES MODULES JS -->
     <script type="importmap">
     {
         "imports": {
@@ -38,7 +38,32 @@
     </script>
 </head>
 <body>
-    <!-- Modules JS -->
+
+    <div class="container">
+
+    <!-- COLONNE À GAUCHE -->
+    <div class="column left">
+      <div class="placeholder vfx">VFX</div>
+      <div class="placeholder zdog">Zdog</div>
+      <div class="placeholder graph">Graphique</div>
+    </div>
+
+    <!-- COLONNE AU CENTRE -->
+    <div class="column center">
+      <div class="placeholder buttons">Boutons + Icones</div>
+      <div class="placeholder map">Carte 2D / Globe</div>
+      <div class="placeholder slider">Slider</div>
+    </div>
+
+    <!-- COLONNE À DROITE -->
+    <div class="column right">
+      <div class="placeholder title">Titre + Texte</div>
+      <div class="placeholder tone">Tone</div>
+      <div class="placeholder graph">Graphique</div>
+    </div>
+  </div>
+
+    <!-- MODULES JS -->
     <script type="module" src="./src/js/animejs.js"></script>
     <script type="module" src="./src/js/chartjs.js"></script>
     <script type="module" src="./src/js/maplibre.js"></script>
@@ -46,10 +71,11 @@
     <script type="module" src="./src/js/zdog.js"></script>
     <script type="module" src="./src/js/tonejs.js"></script>
     <script type="module" src="./src/js/typedjs.js"></script>
+ 
+ 
+ 
+    <!-- BOOTSTRAP JS -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-    <!-- Bootstrap JS -->
-    <script src="./src/js/bootstrap.js" defer></script> 
 </body>
 </html>

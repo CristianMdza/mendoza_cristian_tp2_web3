@@ -1,4 +1,4 @@
-/* Variables de thème Bootstrap (couleurs + styles globaux) */
+/* VARIABLES DE THÈME BOOTSTRAP (COULEURS + STYLES GLOBAUX) */
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -174,4 +174,128 @@
   --bs-form-valid-border-color: #75b798;
   --bs-form-invalid-color: #ea868f;
   --bs-form-invalid-border-color: #ea868f;
+}
+
+/* FONT " EUROSTILE " */
+/* NOTE: PAS TOUTES SONT IMPORTÉES */
+
+/* POUR TEXTE NORMAL */
+@font-face {
+    font-family: 'Eurostile';
+    src: url('../../assets/fonts/eurostile/fonnts.com-Eurostile.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* POUR TITRES PRINCIPAUX */
+@font-face {
+    font-family: 'Eurostile';
+    src: url('../../assets/fonts/eurostile/fonnts.com-Eurostile_Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* POUR SOUS-TITRES */
+@font-face {
+    font-family: 'Eurostile';
+    src: url('../../assets/fonts/eurostile/fonnts.com-Eurostile_Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* POUR SOUS-TITRES SECONDAIRES */
+@font-face {
+    font-family: 'Eurostile Condensed';
+    src: url('../../assets/fonts/eurostile/fonnts.com-Eurostile_Cond.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ITALIQUE RÉGULAIRE */
+@font-face {
+    font-family: 'Eurostile';
+    src: url('../../assets/fonts/eurostile/fonnts.com-Eurostile_Regular_Oblique.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* ITALIQUE GRAS */
+@font-face {
+    font-family: 'Eurostile';
+    src: url('../../assets/fonts/eurostile/fonnts.com-Eurostile_Bold_Oblique.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* RESET SIMPLE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* BACKGROUND - INTERFACE */
+body {
+  background-image: url('../../assets/img/arriere_plan_visere_futuriste.jpg');
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #fff;
+}
+
+
+/* CONTENEUR PRINCIPAL EN GRID */
+.container {
+  display: grid;
+  grid-template-columns: 8fr 1fr 8fr; 
+  gap: 5px;
+  padding: 90px;
+  height: 100%;
+}
+
+/* COLONNES - WIREFRAME */
+.column {
+  display: grid;
+  grid-template-rows: repeat(3, auto); 
+  gap: 5px; 
+  justify-items: center; 
+  align-items: center;  
+}
+
+/* PLACEHOLDERS - WIREFRAME */
+.placeholder {
+  width: 300px;       
+  height: 200px;      
+  border: 2px solid #fff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* COLONNE AU CENTRE */
+.column.center .placeholder {
+  width: 400px; 
+  height: 200px; 
+}
+
+/* COLONNE AU CENTRE - HAUTEUR DE PLACEHOLDERS SPÉCIFIQUES */
+
+/* PLACEHOLDER - HAUT */
+.column.center .placeholder:nth-child(1) { 
+  height: 90px; 
+}
+
+/* PLACEHOLDER - CENTRE */
+.column.center .placeholder:nth-child(2) { 
+  height: 360px; 
+}
+
+/* PLACEHOLDER - BAS */
+.column.center .placeholder:nth-child(3) { 
+  height: 150px; 
 }
