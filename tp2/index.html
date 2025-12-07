@@ -15,11 +15,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tp2 Interface - Visère Futuriste</title>
  
-    <!-- CSS -->        
+    <!-- LINKS CSS -->
+    <!-- CSS FRAMEWORK PRINCIPAL - BOOTSTRAP -->        
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- BOOTSTRAP ICÔNES (PACK D'ICÔNES EN SVG) -->
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <!-- CSS PERSONNALISÉ DU PROJET -->
     <link rel="stylesheet" href="./src/css/styles.css">
+    <!-- CSS DE LA LIBRAIRIE DE CARTES MAPLIBRE -->
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.13.0/dist/maplibre-gl.css">
+    <!-- CSS POUR LE CARROUSEL SWIPER -->
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
  
     <!-- IMPORTMAP POUR LES MODULES JS -->
     <script type="importmap">
@@ -39,17 +45,23 @@
     </script>
 </head>
 <body>
-
+    <!-- CONTENEUR PRINCIPAL -->
     <div class="container">
 
         <!-- COLONNE À GAUCHE -->
-         <div class="column left">
-            <div class="placeholder vfx">VFX</div>
+        <div class="column left">
+
+            <div class="placeholder vfx">
+                <img class="vfx-img"
+                    src="./assets/img/mural_leonard_cohen_site_ombrages_1193_x_853.jpg"
+                    alt="mural-leonard-cohen">
+            </div>
+
             <div class="placeholder zdog">
                 <canvas class="zdog-item" id="zdog1"></canvas>
                 <canvas class="zdog-item" id="zdog2"></canvas>
                 <canvas class="zdog-item" id="zdog3"></canvas>
-        </div>
+            </div>
 
             <div class="placeholder graph">Graphique</div>
         </div>
@@ -63,7 +75,9 @@
 
         <!-- COLONNE À DROITE -->
         <div class="column right">
-            <div class="placeholder title">Titre + Texte</div>
+            <div class="placeholder title">
+                <span id="typed-text"></span>
+            </div>
             <div class="placeholder tone">Tone</div>
             <div class="placeholder graph">Graphique</div>
         </div>
@@ -79,8 +93,14 @@
     <script type="module" src="./src/js/tonejs.js"></script>
     <script type="module" src="./src/js/typedjs.js"></script>
 
+    <!-- SCRIPTS SRC JS -->
     <!-- BOOTSTRAP JS -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SWIPER JS -->
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+
+     <script type="module" src="./src/js/swiperjs.js"></script>
 
 </body>
 </html>
