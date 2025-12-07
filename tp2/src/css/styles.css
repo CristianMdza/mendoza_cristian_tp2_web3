@@ -300,9 +300,41 @@ body {
   height: 150px; 
 }
 
-/* CARTE MAPLIBRE - REMPLACE LE PLACEHOLDER */
+/* CARTE MAPLIBRE - GLOBE 3D ANIMÉ */
 #carte {
   width: 400px;
   height: 360px;
   border-radius: 10px;
 }
+
+/* ZDOG : 3 CANVAS ALIGNÉS DANS LE PLACEHOLDER */
+.placeholder.zdog {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;      
+  position: relative;
+}
+
+/* TAILLE DES 3 ZDOG */
+.zdog-item {
+  width: 100px;
+  height: 100px;
+  background: transparent; 
+  overflow: hidden;
+}
+
+#zdog1, #zdog2 {
+  width: 90px;
+  height: 90px;
+}
+
+#zdog3 {
+  width: 120px;
+  height: 120px;
+}
+
+
+
