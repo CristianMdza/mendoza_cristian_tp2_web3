@@ -299,3 +299,10 @@ body {
 .column.center .placeholder:nth-child(3) { 
   height: 150px; 
 }
+
+/* CARTE MAPLIBRE - REMPLACE LE PLACEHOLDER */
+#carte {
+  width: 400px;
+  height: 360px;
+  border-radius: 10px;
+}
