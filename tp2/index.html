@@ -19,7 +19,7 @@
     <!-- CSS FRAMEWORK PRINCIPAL - BOOTSTRAP -->        
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- BOOTSTRAP ICÔNES (PACK D'ICÔNES EN SVG) -->
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <!-- CSS PERSONNALISÉ DU PROJET -->
     <link rel="stylesheet" href="./src/css/styles.css">
     <!-- CSS DE LA LIBRAIRIE DE CARTES MAPLIBRE -->
@@ -68,16 +68,44 @@
 
         <!-- COLONNE AU CENTRE -->
         <div class="column center">
-            <div class="placeholder buttons">Boutons + Icones</div>
+            
+            <div class="placeholder icons">
+                <div class="hud-icons">
+
+                    <button class="hud-btn" data-label="Geo">
+                        <i class="bi bi-geo"></i>
+                    </button>
+
+                    <button class="hud-btn" data-label="Face Detect">
+                        <i class="bi bi-person-bounding-box"></i>
+                    </button>
+
+                    <button class="hud-btn" data-label="Température">
+                        <i class="bi bi-thermometer-snow"></i>
+                    </button>
+
+                    <button class="hud-btn" data-label="Analytics">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </button>
+
+                    <button class="hud-btn" data-label="Audio Scan">
+                        <i class="bi bi-soundwave"></i>
+                    </button>
+
+                    <button class="hud-btn" data-label="AI">
+                        <i class="bi bi-openai"></i>
+                    </button>
+
+                </div>
+            </div>
+            <!-- CARTE MAPLIBRE -->
             <div id="carte"></div>
             <div class="placeholder slider">Slider</div>
         </div>
 
         <!-- COLONNE À DROITE -->
         <div class="column right">
-            <div class="placeholder title">
-                <span id="typed-text"></span>
-            </div>
+            <div class="placeholder title">Titre + Texte</div>
             <div class="placeholder tone">Tone</div>
             <div class="placeholder graph">Graphique</div>
         </div>
