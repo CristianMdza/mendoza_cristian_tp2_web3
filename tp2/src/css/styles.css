@@ -458,6 +458,77 @@ body {
   }
 }
 
+/* ===== PLACEHOLDER “TEXTE TYPEDJS - HUD” ===== */
+
+.hud-text {
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
+
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #25e7ff; /* Bleu néon HUD */
+  font-family: 'Eurostile', sans-serif;
+}
+
+/* TITRE PRINCIPAL = "MONTRÉAL, QUÉBEC" */
+.hud-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #8df7ff;
+
+  text-shadow:
+    0 0 6px rgba(141,247,255,0.8),
+    0 0 14px rgba(37,231,255,0.6);
+}
+
+/* TEXTE ANIMÉ (DONNÉES) PAR TYPEDJS */
+#typed-info {
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-line;
+
+  color: #25e7ff;
+
+  text-shadow:
+    0 0 4px rgba(37,231,255,0.6),
+    0 0 12px rgba(37,231,255,0.4);
+}
+
+/* STYLE SPÉCIFIQUE POUR LE PLACEHOLDER DU TEXTE ANIMÉ */
+.placeholder.title {
+  align-items: flex-start; 
+  border: none;
+}
+
+.hud-text {
+  width: 100%;
+  height: auto;
+}
+
+/* ===== LIMITATION DU CURSOR HUD DANS LE PLACEHOLDER DU TYPEDJS ===== */
+
+/* ÇA LIMITE LA HAUTEUR DU TEXTE ANIMÉ */
+#typed-info {
+  max-height: 120px;   
+  overflow: hidden;   
+}
+
+/* STYLE DU CURSEUR */
+.typed-cursor {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* CACHE LES CLONES INUTILES DU CURSEUR */
+#typed-info .typed-cursor:not(:first-of-type) {
+  display: none;
+}
+
 
 
 

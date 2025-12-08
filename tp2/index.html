@@ -39,7 +39,7 @@
             "vfx-js": "https://esm.sh/@vfx-js/core",
             "zzz": "https://esm.sh/zdog",
             "tone.js": "https://esm.sh/tone@15.1.22",
-            "typed.js": "./node_modules/typed.js/dist/typed.module.js"
+            "typed.js": "/node_modules/typed.js/dist/typed.module.js"
         }
     }
     </script>
@@ -50,13 +50,13 @@
 
         <!-- COLONNE À GAUCHE -->
         <div class="column left">
-
+            <!-- VFX IMAGE DE LEONARD COHEN DANS MURAL D'ÉDIFICE MTL -->
             <div class="placeholder vfx">
                 <img class="vfx-img"
                     src="./assets/img/mural_leonard_cohen_site_ombrages_1193_x_853.jpg"
                     alt="mural-leonard-cohen">
             </div>
-
+            <!-- ZDOG CANVAS -->
             <div class="placeholder zdog">
                 <canvas class="zdog-item" id="zdog1"></canvas>
                 <canvas class="zdog-item" id="zdog2"></canvas>
@@ -68,7 +68,7 @@
 
         <!-- COLONNE AU CENTRE -->
         <div class="column center">
-            
+            <!-- ICÔNES HUD -->
             <div class="placeholder icons">
                 <div class="hud-icons">
 
@@ -105,7 +105,13 @@
 
         <!-- COLONNE À DROITE -->
         <div class="column right">
-            <div class="placeholder title">Titre + Texte</div>
+            <!-- TEXTE ANIMÉ TYPEDJS DANS HUD -->
+            <div class="placeholder title">
+                <div class="hud-text">
+                    <h2 id="typed-title" class="hud-title"></h2>
+                    <span id="typed-info"></span>
+                </div>
+            </div>
             <div class="placeholder tone">Tone</div>
             <div class="placeholder graph">Graphique</div>
         </div>
