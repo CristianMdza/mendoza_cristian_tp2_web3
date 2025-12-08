@@ -26,7 +26,7 @@ new Zdog.Ellipse({
   addTo: illo1,
   diameter: 40,
   stroke: 8,
-  color: "#04D9FF",
+  color: "#0dcaf0",
 });
 
 function animate1() {
@@ -49,8 +49,8 @@ new Zdog.Hemisphere({
   addTo: illo2,
   diameter: 40,
   stroke: false,
-  color: "#04D9FF",
-  backface: "#7DFDFE",
+  color: "#0dcaf0",
+  backface: "#9ceffcff",
 });
 
 function animate2() {
@@ -73,8 +73,8 @@ new Zdog.Cylinder({
   diameter: 40,
   length: 50,
   stroke: false,
-  color: "#04D9FF",
-  backface: "#7DFDFE",
+  color: "#0dcaf0",
+  backface: "#9ceffcff",
 });
 
 function animate3() {
