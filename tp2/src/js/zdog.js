@@ -12,7 +12,7 @@ function fixCanvas(id, size = 120) {
 
 fixCanvas("zdog1", 120);
 fixCanvas("zdog2", 120);
-fixCanvas("zdog3", 120);
+fixCanvas("zdog3", 180);
 
 // ===== ZDOG #1 — ANNEAU ANIMÉ =====
 
@@ -60,7 +60,7 @@ function animate2() {
 }
 animate2();
 
-// ===== ZDOG #3 — CYLINDER ANIMÉ =====
+// ===== ZDOG #3 — CONE ANIMÉ =====
 
 const illo3 = new Zdog.Illustration({
   element: "#zdog3",
@@ -68,7 +68,7 @@ const illo3 = new Zdog.Illustration({
   scale: 1.8,
 });
 
-new Zdog.Cylinder({
+new Zdog.Cone({
   addTo: illo3,
   diameter: 40,
   length: 50,
