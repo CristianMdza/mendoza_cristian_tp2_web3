@@ -29,12 +29,18 @@ const graphique = new Chart(canvas, {
                 data: [48, 22, 9, 8, 6, 7],
 
                 backgroundColor: [
-                    "rgba(80,200,255,0.55)",    // FRANÇAIS
-                    "rgba(120,160,255,0.55)",  // ANGLAIS
-                    "rgba(255,170,70,0.55)",   // ARABE
-                    "rgba(255,90,90,0.55)",    // ESPAGNOL
-                    "rgba(190,100,255,0.55)",  // MANDARIN
-                    "rgba(140,255,180,0.55)"   // AUTRES
+                    // FRANÇAIS
+                    "rgba(80,200,255,0.55)", 
+                    // ANGLAIS   
+                    "rgba(120,160,255,0.55)", 
+                    // ARABE 
+                    "rgba(255,170,70,0.55)", 
+                    // ESPAGNOL  
+                    "rgba(255,90,90,0.55)",  
+                    // MANDARIN  
+                    "rgba(190,100,255,0.55)", 
+                    // AUTRES 
+                    "rgba(140,255,180,0.55)"   
                 ],
 
                 borderWidth: 0

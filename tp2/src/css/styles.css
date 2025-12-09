@@ -2,20 +2,53 @@
 
 :root {
 
-  /* COULEURS PRINCIPALES */
-  --hud-neon: #25e7ff;         /* TURQUOISE NÉON PRINCIPAL */
-  --hud-neon-soft: #8df7ff;   /* TURQUOISE PLUS PÂLE (HOVER & TITRES) */
-  --hud-neon-white: #bff6ff;  /* BLANC-BLEUTÉ POUR ICÔNES  */
-  --hud-cyan: #0dcaf0;        /* CYAN NORMAL */
+  /* ========== COULEURS PRINCIPALES ========== */
+
+  /* TURQUOISE NÉON PRINCIPAL */
+  --hud-neon: #25e7ff;         
+  /* TURQUOISE PLUS PÂLE (HOVER & TITRES) */
+  --hud-neon-soft: #8df7ff;   
+  /* BLANC-BLEUTÉ POUR ICÔNES  */
+  --hud-neon-white: #bff6ff;  
+  /* CYAN NORMAL */
+  --hud-cyan: #0dcaf0;        
 
   /* NEUTRES */
   --hud-white: #ffffff;
   --hud-black: #000000;
 
-  /* OMBRES / GLOW */
+  /* ========== OMBRES / GLOW ========== */
+
+  /* GLOW PRINCIPAUX */
   --hud-glow-main: rgba(37,231,255,0.7);
   --hud-glow-soft: rgba(37,231,255,0.4);
   --hud-glow-strong: rgba(141,247,255,1);
+
+  /* VARIATIONS DE TURQUOISE */
+  --hud-glow-100: rgba(37,231,255,1);
+  --hud-glow-90: rgba(37,231,255,0.9); 
+  --hud-glow-80: rgba(37,231,255,0.8); 
+  --hud-glow-60: rgba(37,231,255,0.6);
+  --hud-glow-35: rgba(37,231,255,0.35);
+  --hud-glow-25: rgba(37,231,255,0.25);
+  --hud-glow-15: rgba(37,231,255,0.15);
+  --hud-glow-08: rgba(37,231,255,0.08);
+  --hud-glow-05: rgba(37,231,255,0.05);
+
+  /* VARIATIONS DE BLEU PÂLE */
+  --hud-soft-80: rgba(141,247,255,0.8);
+  --hud-soft-70: rgba(141,247,255,0.7); 
+  --hud-soft-60: rgba(141,247,255,0.6);
+
+  /* GLOW BLANC */
+  --hud-white-glow-100: rgba(255,255,255,1);
+
+  /* EFFET VERRE HUD */
+  --hud-glass-base: rgba(80,200,255,0.08);
+
+  /* FOND HUD SOMBRE */
+  --hud-dark-glass: rgba(10,20,35,0.35);
+
 }
 
 /* ==================== FONT " EUROSTILE " ==================== */
@@ -90,6 +123,13 @@ body {
   color: var(--hud-white);
 }
 
+/* FULLSCREEN - PAGE */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 /* ==================== LAYOUT EN GRID ==================== */
 
 /* CONTENEUR PRINCIPAL EN GRID */
@@ -151,6 +191,63 @@ body {
   width: 400px;
   height: 360px;
   border-radius: 10px;
+}
+
+/* ==================== MAPLIBRE HUD BUTTONS (+ et -) - STYLE FUTURISTE ==================== */
+
+/* GROUPE DES BOUTONS */
+.maplibregl-ctrl-group {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 12px;
+}
+
+/* BOUTONS INDIVIDUELS */
+.maplibregl-ctrl button {
+  width: 38px;
+  height: 38px;
+
+  background: transparent !important;
+  border: 2px solid var(--hud-neon) !important;
+  border-radius: 50%;
+  margin: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* GLOW */
+  box-shadow:
+    0 0 6px var(--hud-glow-60),
+    0 0 14px var(--hud-glow-35);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* ICÔNE (+ / -) */
+.maplibregl-ctrl-icon {
+  filter:
+    brightness(400%) saturate(0)
+    drop-shadow(0 0 6px var(--hud-white-glow-100))
+    drop-shadow(0 0 10px var(--hud-soft-80));
+}
+
+/* HOVER */
+.maplibregl-ctrl button:hover {
+  transform: scale(1.15);
+  border-color: var(--hud-neon-soft);
+
+  box-shadow:
+    0 0 12px var(--hud-glow-strong),
+    0 0 22px var(--hud-glow-08);
+}
+
+/* CLICK */
+.maplibregl-ctrl button:active {
+  transform: scale(1.05);
 }
 
 /* ==================== PLACEHOLDER ZDOG & VFX ==================== */
@@ -238,8 +335,8 @@ body {
 /* EFFET GLOW PAR DÉFAUT */
 .hud-btn i {
   filter:
-    drop-shadow(0 0 5px rgba(37,231,255,0.7))
-    drop-shadow(0 0 12px rgba(37,231,255,0.4));
+    drop-shadow(0 0 5px var(--hud-glow-main))
+    drop-shadow(0 0 12px var(--hud-glow-soft));
 }
 
 /* EFFET AU SURVOL DES ICÔNES */
@@ -249,12 +346,12 @@ body {
 
 /* EFFET GLOW INTENSIFIÉ AU SURVOL DES ICÔNES */
 .hud-btn:hover i {
-  color: #8df7ff;
+  color: var(--hud-neon-soft);
   
   filter:
-    drop-shadow(0 0 8px rgba(141,247,255,1))
-    drop-shadow(0 0 18px rgba(37,231,255,0.8))
-    drop-shadow(0 0 30px rgba(37,231,255,0.6));
+    drop-shadow(0 0 8px var(--hud-glow-strong))
+    drop-shadow(0 0 18px var(--hud-glow-08))
+    drop-shadow(0 0 30px var(--hud-glow-60));
 }
 
 /* ANIMATION EFFET “RESPIRATION” DES ICÔNES */
@@ -268,16 +365,16 @@ body {
 
 /* STYLE SPÉCIFIQUE POUR LE PLACEHOLDER DES ICONES */
 .placeholder.icons {
-  border: 2px solid #25e7ff;       
+  border: 2px solid var(--hud-neon);       
   border-radius: 18px;            
   background: transparent;
   transform: translate(-3px, 16px);
 
   /* GLOW LUMIEUX INTERNE ET EXTERNE */
   box-shadow:
-    0 0 8px rgba(37,231,255,0.6),
-    0 0 18px rgba(37,231,255,0.35),
-    inset 0 0 10px rgba(37,231,255,0.25);
+    0 0 8px var(--hud-glow-60),
+    0 0 18px var(--hud-glow-35),
+    inset 0 0 10px var(--hud-glow-25);
 
   /* ANIMATION DE PULSATION */
   animation: hud-border-pulse 2.8s infinite ease-in-out;
@@ -287,23 +384,23 @@ body {
 @keyframes hud-border-pulse {
   0% {
     box-shadow:
-      0 0 6px rgba(37,231,255,0.4),
-      0 0 14px rgba(37,231,255,0.25),
-      inset 0 0 8px rgba(37,231,255,0.15);
+      0 0 6px var(--hud-glow-soft),
+      0 0 14px var(--hud-glow-25),
+      inset 0 0 8px var(--hud-glow-15);
   }
 
   50% {
     box-shadow:
-      0 0 10px rgba(37,231,255,0.9),
-      0 0 24px rgba(37,231,255,0.6),
-      inset 0 0 14px rgba(37,231,255,0.4);
+      0 0 10px var(--hud-glow-90),
+      0 0 24px var(--hud-glow-60),
+      inset 0 0 14px var(--hud-glow-soft);
   }
 
   100% {
     box-shadow:
-      0 0 6px rgba(37,231,255,0.4),
-      0 0 14px rgba(37,231,255,0.25),
-      inset 0 0 8px rgba(37,231,255,0.15);
+      0 0 6px var(--hud-glow-soft),
+      0 0 14px var(--hud-glow-25),
+      inset 0 0 8px var(--hud-glow-15);
   }
 }
 
@@ -320,7 +417,7 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  color: #25e7ff; 
+  color: var(--hud-neon); 
   font-family: 'Eurostile', sans-serif;
 }
 
@@ -329,11 +426,11 @@ body {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #8df7ff;
+  color: var(--hud-neon-soft);
 
   text-shadow:
-    0 0 6px rgba(141,247,255,0.8),
-    0 0 14px rgba(37,231,255,0.6);
+    0 0 6px var(--hud-soft-80),
+    0 0 14px var(--hud-glow-60);
 }
 
 /* TEXTE ANIMÉ (DONNÉES) PAR TYPEDJS */
@@ -343,11 +440,11 @@ body {
   font-weight: 400;
   white-space: pre-line;
 
-  color: #25e7ff;
+  color: var(--hud-neon);
 
   text-shadow:
-    0 0 4px rgba(37,231,255,0.6),
-    0 0 12px rgba(37,231,255,0.4);
+    0 0 4px var(--hud-glow-60),
+    0 0 12px var(--hud-glow-soft);
 }
 
 /* STYLE SPÉCIFIQUE POUR LE PLACEHOLDER DU TEXTE ANIMÉ */
@@ -387,9 +484,9 @@ body::before {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(37,231,255,0.05) 35%,
-    rgba(37,231,255,0.25) 50%,
-    rgba(37,231,255,0.05) 65%,
+    var(--hud-glow-05) 35%,
+    var(--hud-glow-25) 50%,
+    var(--hud-glow-05) 65%,
     transparent 100%
   );
 
@@ -434,9 +531,9 @@ body::before {
 
     /* EFFET GLOW LUMIEUX INTERNE ET EXTERNE */
     box-shadow:
-        0 0 8px rgba(37,231,255,0.6),
-        0 0 18px rgba(37,231,255,0.35),
-        inset 0 0 10px rgba(37,231,255,0.25);
+        0 0 8px var(--hud-glow-60),
+        0 0 18px var(--hud-glow-35),
+        inset 0 0 10px var(--hud-glow-25);
 
     animation: hud-border-pulse 2.8s infinite ease-in-out;
 }
@@ -447,7 +544,7 @@ body::before {
     position: absolute;
     inset: 0;
 
-    background: rgba(80, 200, 255, 0.08);      
+    background: var(--hud-glow-08);      
     
     backdrop-filter: blur(6px);               
     -webkit-backdrop-filter: blur(6px);
@@ -494,9 +591,9 @@ body::before {
 
     /* EFFET GLOW LUMIEUX INTERNE ET EXTERNE */
     box-shadow:
-        0 0 8px rgba(37,231,255,0.6),
-        0 0 18px rgba(37,231,255,0.35),
-        inset 0 0 10px rgba(37,231,255,0.25);
+        0 0 8px var(--hud-glow-60),
+        0 0 18px var(--hud-glow-35),
+        inset 0 0 10px var(--hud-glow-25);
 
     animation: hud-border-pulse 2.8s infinite ease-in-out;
 }
@@ -512,7 +609,7 @@ body::before {
     position: absolute;
     inset: 0;
 
-    background: rgba(80, 200, 255, 0.08);
+    background: var(--hud-glass-base);
 
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -559,15 +656,15 @@ body::before {
 .placeholder.slider {
   position: relative;
   overflow: hidden;
-  border: 2px solid #25e7ff;
+  border: 2px solid var(--hud-neon);
   border-radius: 16px;
 
   box-shadow:
-    0 0 10px rgba(37,231,255,0.7),
-    0 0 25px rgba(37,231,255,0.35),
-    inset 0 0 15px rgba(37,231,255,0.15);
+    0 0 10px var(--hud-glow-main),
+    0 0 25px var(--hud-glow-35),
+    inset 0 0 15px var(--hud-glow-15);
 
-  background: rgba(10,20,35,0.35);
+  background: var(--hud-dark-glass);
 }
 
 /* TAILLE DU CAROUSEL ET DES ITEMS */
@@ -601,15 +698,15 @@ body::before {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background-color: rgba(37,231,255,0.7);
-  box-shadow: 0 0 6px rgba(37,231,255,0.8);
+  background-color: var(--hud-glow-main);
+  box-shadow: 0 0 6px var(--hud-glow-80);
   border: none;
   opacity: 0.8;
 }
 
 .carousel-indicators .active {
-  background-color: #8df7ff;
-  box-shadow: 0 0 10px rgba(141,247,255,1);
+  background-color: var(--hud-neon-soft);
+  box-shadow: 0 0 10px var(--hud-glow-strong);
   opacity: 1;
 }
 
@@ -653,8 +750,8 @@ body::before {
   pointer-events: none;
 
   filter:
-    drop-shadow(0 0 5px rgba(37,231,255,0.8))
-    drop-shadow(0 0 12px rgba(37,231,255,0.5));
+    drop-shadow(0 0 5px var(--hud-glow-80))
+    drop-shadow(0 0 12px var(--hud-glow-05));
 
   transition:
     transform 0.2s ease,
@@ -669,8 +766,8 @@ body::before {
   color: #ffffff;
 
   filter:
-    drop-shadow(0 0 10px rgba(141,247,255,1))
-    drop-shadow(0 0 22px rgba(37,231,255,1));
+    drop-shadow(0 0 10px var(--hud-glow-strong))
+    drop-shadow(0 0 22px var(--hud-glow-100));
 }
 
 /* ==================== PLACEHOLDER AUDIO TONE ==================== */
@@ -699,8 +796,8 @@ body::before {
     font-family: 'Eurostile', sans-serif;
 
     text-shadow:
-        0 0 6px rgba(141,247,255,0.7),
-        0 0 12px rgba(37,231,255,0.5);
+        0 0 6px var(--hud-soft-70),
+        0 0 12px var(--hud-glow-05);
 
     transition:
         transform 0.25s ease,
@@ -711,8 +808,8 @@ body::before {
 .tone-btn i {
     font-size: 60px;
     filter:
-        drop-shadow(0 0 6px rgba(37,231,255,0.7))
-        drop-shadow(0 0 14px rgba(37,231,255,0.4));
+        drop-shadow(0 0 6px var(--hud-glow-main))
+        drop-shadow(0 0 14px var(--hud-glow-soft));
 }
 
 /* LABEL TEXTE */
@@ -730,8 +827,8 @@ body::before {
 /* EFFET AU SURVOL DU BOUTON AUDIO */
 .tone-btn.playing i {
     filter:
-        drop-shadow(0 0 25px rgba(255,255,255,1))
-        drop-shadow(0 0 45px rgba(37,231,255,1));
+        drop-shadow(0 0 25px var(--hud-white-glow-100))
+        drop-shadow(0 0 45px var(--hud-glow-100));
 }
 
 /* ==================== INTERACTION CLICKABLE DU TONE JS ==================== */
