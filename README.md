@@ -10,12 +10,12 @@
 **Session :** Automne 2025  
 
 ---
-## 📑 Sommaire
+##  Sommaire
 
-- [📌 Description du projet](#-description-du-projet)
-- [🎨 Direction artistique](#-direction-artistique)
-- [🧱 Structure & Mise en page](#-structure--mise-en-page)
-- [🛠️ Technologies utilisées](#️-technologies-utilisées)
+- [ Description du projet](#-description-du-projet)
+- [ Direction artistique](#-direction-artistique)
+- [ Structure & Mise en page](#-structure--mise-en-page)
+- [ Technologies utilisées](#️-technologies-utilisées)
   - [CSS Grid](#css-grid)
   - [Bootstrap Icons](#bootstrap-icons)
   - [Chart.js](#chartjs)
@@ -23,16 +23,16 @@
   - [ZDog](#zdog)
   - [VFX-JS](#vfx-js)
   - [Tone.js](#tonejs)
-- [🖼️ Contenu média](#️-contenu-média)
+- [ Contenu média](#️-contenu-média)
   - [Images VFX](#images-vfx)
   - [Carrousel d’images (Pixabay)](#carrousel-dimages-pixabay)
-- [📊 Données graphiques](#-données-graphiques)
-- [✅ Résultat attendu](#-résultat-attendu)
-- [👤 Auteur](#-auteur)
+- [ Données graphiques](#-données-graphiques)
+- [ Résultat attendu](#-résultat-attendu)
+- [ Auteur](#-auteur)
 
 ---
 
-## 📌 Description du projet
+##  Description du projet
 
 Ce projet consiste à concevoir une **interface interne de visière de casque futuriste**, inspirée de l’univers de **Halo**.  
 La visière simule un système d’analyse urbaine en temps réel du **centre-ville de Montréal** à l’aide de modules visuels interactifs :
@@ -48,7 +48,7 @@ L’ensemble crée une **expérience immersive de surveillance, d’analyse et d
 
 ---
 
-## 🎨 Direction artistique
+##  Direction artistique
 
 **Inspiration principale**  
 - HUD et visières futuristes du jeu **Halo**
@@ -63,7 +63,7 @@ L’ensemble crée une **expérience immersive de surveillance, d’analyse et d
 
 ---
 
-## 🧱 Structure & Mise en page
+##  Structure & Mise en page
 
 L’interface repose sur une **grille CSS en trois colonnes**, chacune composée de **trois placeholders verticaux** :
 
@@ -72,7 +72,7 @@ Tous les modules interactifs s’intègrent dans cette grille globale.
 
 ---
 
-## 🛠️ Technologies utilisées
+##  Technologies utilisées
 
 ### CSS Grid  
 **Emplacement :** Structure complète de la page  
@@ -185,7 +185,7 @@ La visière transforme ainsi l’architecture réelle en visualisation abstraite
 
 ---
 
-## 🖼️ Contenu média
+##  Contenu média
 
 ### Images VFX
 
@@ -207,14 +207,14 @@ Les images défilent via un **carrousel interactif (Swiper/Bootstrap)** intégr�
 
 ---
 
-## 📊 Données graphiques
+##  Données graphiques
 
 > Les données utilisées dans les graphiques **sont fictives**.  
 Elles simulent des statistiques qui seraient collectées et analysées par un véritable système futuriste de surveillance urbaine.
 
 ---
 
-## ✅ Résultat attendu
+##  Résultat attendu
 
 L’interface finale offre :
 
@@ -231,7 +231,7 @@ Le tout constitue une **expérience interactive complète** explorant la ville d
 
 ---
 
-## 👤 Auteur
+##  Auteur
 
 **Cristian Mendoza**  
 Étudiant en Techniques d’Intégration Multimédia  
