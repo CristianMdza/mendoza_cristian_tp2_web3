@@ -10,6 +10,27 @@
 **Session :** Automne 2025  
 
 ---
+## 📑 Sommaire
+
+- [📌 Description du projet](#-description-du-projet)
+- [🎨 Direction artistique](#-direction-artistique)
+- [🧱 Structure & Mise en page](#-structure--mise-en-page)
+- [🛠️ Technologies utilisées](#️-technologies-utilisées)
+  - [CSS Grid](#css-grid)
+  - [Bootstrap Icons](#bootstrap-icons)
+  - [Chart.js](#chartjs)
+  - [MapLibre](#maplibre)
+  - [ZDog](#zdog)
+  - [VFX-JS](#vfx-js)
+  - [Tone.js](#tonejs)
+- [🖼️ Contenu média](#️-contenu-média)
+  - [Images VFX](#images-vfx)
+  - [Carrousel d’images (Pixabay)](#carrousel-dimages-pixabay)
+- [📊 Données graphiques](#-données-graphiques)
+- [✅ Résultat attendu](#-résultat-attendu)
+- [👤 Auteur](#-auteur)
+
+---
 
 ## 📌 Description du projet
 
