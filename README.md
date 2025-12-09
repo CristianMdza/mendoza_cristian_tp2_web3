@@ -16,12 +16,12 @@
 Ce projet consiste à concevoir une **interface interne de visière de casque futuriste**, inspirée de l’univers de **Halo**.  
 La visière simule un système d’analyse urbaine en temps réel du **centre-ville de Montréal** à l’aide de modules visuels interactifs :
 
-- Carte 3D de géolocalisation
-- Détection sonore avec visualisation audio
-- Reconnaissance faciale
-- Objets géométriques 3D abstraits
-- Données graphiques animées
-- Carrousel d’images de lieux emblématiques
+- Carte 3D de géolocalisation (MapLibre)
+- Détection sonore avec visualisation audio (Tone-JS)
+- Reconnaissance faciale (Vfx-JS)
+- Objets géométriques 3D abstraits (Zdog)
+- Données graphiques animées (Chart-JS)
+- Carrousel d’images de lieux emblématiques (Bootstrap)
 
 L’ensemble crée une **expérience immersive de surveillance, d’analyse et de reconnaissance urbaine futuriste**.
 
