@@ -38,8 +38,7 @@ L’ensemble crée une **expérience immersive de surveillance, d’analyse et d
 - Noir  
 
 **Typographies**
-- **Orbitron** — pour l’ambiance sci-fi
-- **Eurostile-2** — utilisée comme police principale
+- **Eurostile** — utilisée comme police (choix final)
 
 ---
 
