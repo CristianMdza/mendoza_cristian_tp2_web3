@@ -20,7 +20,7 @@
 
     <!-- LINKS CSS -->
     <!-- CSS FRAMEWORK PRINCIPAL - BOOTSTRAP -->        
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- BOOTSTRAP ICÔNES (PACK D'ICÔNES EN SVG) -->
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <!-- CSS PERSONNALISÉ DU PROJET -->
@@ -35,15 +35,15 @@
     {
         "imports": {
             "animejs": "./node_modules/animejs/dist/bundles/anime.esm.min.js",
-            "chart.js/auto": "/node_modules/chart.js/auto/auto.js",
-            "@kurkle/color": "/node_modules/@kurkle/color/dist/color.esm.js",
+            "chart.js/auto": "./node_modules/chart.js/auto/auto.js",
+            "@kurkle/color": "./node_modules/@kurkle/color/dist/color.esm.js",
             "chartjs-adapter-date-fns": "./node_modules/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.esm.js",
             "maplibre-gl": "https://esm.sh/maplibre-gl@5.13.0",
             "vfx-js": "https://esm.sh/@vfx-js/core",
             "zzz": "https://esm.sh/zdog",
             "tone.js": "https://esm.sh/tone@15.1.22",
             "tone-visualizer": "./node_modules/tone-visualizer/dist/visualizer.esm.js",
-            "typed.js": "/node_modules/typed.js/dist/typed.module.js"
+            "typed.js": "./node_modules/typed.js/dist/typed.module.js"
         }
     }
     </script>
@@ -68,11 +68,11 @@
             </div>
 
             <!-- GRAPH POLAIRE - CHART.JS -->
-            <div class="placeholder graph">
+            <div class="placeholder graph polar">
                 <div class="chart-container">
                     <canvas id="polarChart"></canvas>
+                </div>
             </div>
-        </div>
 
         </div>
 
@@ -123,8 +123,8 @@
                 </div>
             </div>
             <div class="placeholder tone">Tone</div>
-            <!-- GRAPHIQUE RADAR - CHART.JS -->
-            <div class="placeholder graph">
+            <!-- GRAPH RADAR - CHART.JS -->
+            <div class="placeholder graph radar">
                 <div class="chart-container">
                     <canvas id="radarChart"></canvas>
                 </div>
@@ -136,7 +136,7 @@
 
     <!-- MODULES JS -->
     <script type="module" src="./src/js/animejs.js"></script>
-    <script type="module" src="./src/js/chartjs.js"></script>
+    <script type="module" src="./src/js/chartjs_polaire.js"></script>
     <script type="module" src="./src/js/chartjs_radar.js"></script>
     <script type="module" src="./src/js/maplibre.js"></script>
     <script type="module" src="./src/js/vfx.js"></script>

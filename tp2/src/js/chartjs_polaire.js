@@ -1,15 +1,16 @@
 // ===== CODE CHART.JS - POUR "GRAPHIQUE POLAIRE" COLONNE GAUCHE =====
 
+// IMPORT LOCAL SELON DANS MON IMPORTMAP
 import Chart from "chart.js/auto";
 
+// RÉFÉRENCE AU CANVAS
 const canvas = document.getElementById("polarChart");
 
 if (!canvas) {
     console.warn("⚠ Canvas polarChart introuvable.");
 }
 
-/* GRAPHIQUE POLAIRE — LANGUES À MONTRÉAL */
-
+// GRAPHIQUE POLAIRE — LANGUES À MONTRÉAL
 const graphique = new Chart(canvas, {
     type: "polarArea",
     // DONNÉES DU GRAPHIQUE POLAIRE
@@ -130,8 +131,7 @@ const graphique = new Chart(canvas, {
 });
 
 
-/* ANIMATION DU GRAPHIQUE POLAIRE */
-   
+// ANIMATION DE MISES À JOUR DES DONNÉES TOUTES LES 1.3s
 // DONNÉES DE BASE
 const baseData = [48, 22, 9, 8, 6, 7];
 
@@ -153,5 +153,5 @@ setInterval(() => {
 
     graphique.update();
 
-}, 1300);
+}, 1000);
 

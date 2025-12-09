@@ -1,4 +1,4 @@
-/* ===== VARIABLES — PALETTE HUD VISIÈRE FUTURISTE ===== */
+/* ==================== VARIABLES — PALETTE HUD VISIÈRE FUTURISTE ==================== */
 
 :root {
 
@@ -18,7 +18,8 @@
   --hud-glow-strong: rgba(141,247,255,1);
 }
 
-/* FONT " EUROSTILE " */
+/* ==================== FONT " EUROSTILE " ==================== */
+
 /* NOTE: PAS TOUTES SONT IMPORTÉES */
 
 /* POUR TEXTE NORMAL */
@@ -69,6 +70,8 @@
     font-style: italic;
 }
 
+/* ==================== STYLES GÉNÉRAUX ==================== */
+
 /* STYLES GLOBAUX */
 * {
   box-sizing: border-box;
@@ -87,6 +90,7 @@ body {
   color: var(--hud-white);
 }
 
+/* ==================== LAYOUT EN GRID ==================== */
 
 /* CONTENEUR PRINCIPAL EN GRID */
 .container {
@@ -125,7 +129,7 @@ body {
   height: 200px; 
 }
 
-/* COLONNE AU CENTRE - HAUTEUR DE PLACEHOLDERS SPÉCIFIQUES */
+/* ==================== TAILLES DES PLACEHOLDERS - COLONNE CENTRALE ==================== */
 
 /* PLACEHOLDER - HAUT */
 .column.center .placeholder:nth-child(1) { 
@@ -142,14 +146,14 @@ body {
   height: 150px; 
 }
 
-/* ===== CARTE MAPLIBRE - GLOBE 3D ANIMÉ ===== */
+/* ==================== CODE CSS CARTE MAPLIBRE - GLOBE 3D ANIMÉ ==================== */
 #carte {
   width: 400px;
   height: 360px;
   border-radius: 10px;
 }
 
-/* ===== PLACEHOLDER ZDOG & VFX ===== */
+/* ==================== PLACEHOLDER ZDOG & VFX ==================== */
 
 /* ZDOG : 3 CANVAS ALIGNÉS DANS LE PLACEHOLDER */
 .placeholder.zdog {
@@ -199,7 +203,7 @@ body {
     display: block;
 }
 
-/* ===== HUD - ICONES ===== */
+/* ==================== PLACEHOLDER "ICONES" - HUD ==================== */
 
 /* CONTENEUR DES ICÔNES */
 .hud-icons {
@@ -262,7 +266,7 @@ body {
 
 /* ===== PLACEHOLDER “ICONES” — HUD CADRE NÉON ===== */
 
-/* STYLE GÉNÉRAL DU CADRE */
+/* STYLE SPÉCIFIQUE POUR LE PLACEHOLDER DES ICONES */
 .placeholder.icons {
   border: 2px solid #25e7ff;       
   border-radius: 18px;            
@@ -279,7 +283,7 @@ body {
   animation: hud-border-pulse 2.8s infinite ease-in-out;
 }
 
-/* ANIMATION DE PULSATION DU CADRE NÉON */
+/* ANIMATION DE PULSATION DU CONTOUR PLACEHOLDER-ICÔNES */
 @keyframes hud-border-pulse {
   0% {
     box-shadow:
@@ -303,12 +307,12 @@ body {
   }
 }
 
-/* ===== PLACEHOLDER “TEXTE TYPEDJS - HUD” ===== */
+/* ==================== PLACEHOLDER TEXTE ANIMÉ "TYPEDJS" - HUD ==================== */
 
-/* STYLE GÉNÉRAL DU PLACEHOLDER */
+/* CONTENEUR DU TEXTE ANIMÉ */
 .hud-text {
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 15px 20px;
 
   text-align: left;
@@ -320,7 +324,7 @@ body {
   font-family: 'Eurostile', sans-serif;
 }
 
-/* TITRE PRINCIPAL = "MONTRÉAL, QUÉBEC" */
+/* TITRE DU TEXTE ANIMÉ */
 .hud-title {
   font-size: 26px;
   font-weight: 700;
@@ -352,13 +356,6 @@ body {
   border: none;
 }
 
-.hud-text {
-  width: 100%;
-  height: auto;
-}
-
-/* ===== LIMITATION DU CURSOR HUD DANS LE PLACEHOLDER DU TYPEDJS ===== */
-
 /* ÇA LIMITE LA HAUTEUR DU TEXTE ANIMÉ */
 #typed-info {
   max-height: 120px;   
@@ -376,9 +373,9 @@ body {
   display: none;
 }
 
-/* ===== EFFET SCANNER - HUD ===== */
+/* ==================== EFFET SCANNER EN OVERLAY SUR TOUTE LA PAGE ==================== */
 
-/* EFFET SCANNER EN OVERLAY SUR TOUTE LA PAGE */
+/* EFFET SCANNER EN OVERLAY */
 body::before {
   content: "";
   position: fixed;
@@ -402,7 +399,7 @@ body::before {
 
   animation: visor-scan 5.5s linear infinite;
 
-  z-index: 9999;
+  z-index: 1;
 }
 
 /* ANIMATION DE L'EFFET SCANNER */
@@ -415,17 +412,18 @@ body::before {
     top: 110%;
   }
 }
-/* ===== CHART.JS - "GRAPHIQUE POLAIRE" - PLACEHOLDER TAILLE ===== */
 
-/* PLACEHOLDER SPÉCIFIQUE "GRAPHIQUE POLAIRE" DANS LA COLONNE DE GAUCHE */
-.column.left .placeholder.graph {
+/* ==================== CHART.JS - "GRAPHIQUE POLAIRE" - PLACEHOLDER ==================== */
+
+/* TAILLE DU PLACEHOLDER "GRAPHIQUE POLAIRE" */
+.column.left .placeholder.graph.polar {
     width: 340px;    
     height: 230px;   
     transform: translateY(-10px);
 }
 
-/* PLACEHOLDER "GRAPHIQUE POLAIRE" - CONTOUR NÉON */
-.placeholder.graph {
+/* STYLE DU PLACEHOLDER "GRAPHIQUE POLAIRE" - CONTOUR NÉON */
+.placeholder.graph.polar {
     position: relative;
 
     border: 2px solid var(--hud-neon);
@@ -443,8 +441,8 @@ body::before {
     animation: hud-border-pulse 2.8s infinite ease-in-out;
 }
 
-/* BACKGROUND DU PLACEHOLDER "GRAPHIQUE POLAIRE" TRANSLUCIDE (EFFET VITRE) */
-.placeholder.graph::before {
+/* BACKGROUND TRANSLUCIDE (EFFET VITRE) DANS LE PLACEHOLDER "GRAPHIQUE POLAIRE" */
+.placeholder.graph.polar::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -458,21 +456,6 @@ body::before {
     border-radius: 18px;                      
 
     animation: hud-glass-pulse 3.5s infinite ease-in-out;
-}
-
-/* CONTAINER DU CHART */
-.chart-container {
-    position: relative;
-    z-index: 2;                               
-
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-
-    overflow: hidden;
-
-    transform: scale(1.08);                 
-    transform-origin: center;
 }
 
 /* CANVAS DU CHART.JS "GRAPHIQUE POLAIRE" - TAILLE MAXIMALE */
@@ -489,5 +472,86 @@ body::before {
     50%  { opacity: 1; }
     100% { opacity: 0.65; }
 }
+
+/* ==================== CHART.JS - "GRAPHIQUE RADAR" - PLACEHOLDER ==================== */
+
+/* TAILLE DU PLACEHOLDER "GRAPHIQUE RADAR" */
+.column.right .placeholder.graph.radar {
+    width: 340px;
+    height: 230px;
+    transform: translateY(-10px);
+}
+
+/* STYLE DU PLACEHOLDER "GRAPHIQUE RADAR" - CONTOUR NÉON */
+.placeholder.graph.radar {
+    position: relative;
+
+    border: 2px solid var(--hud-neon);
+    border-radius: 18px;
+
+    background: transparent;
+    overflow: hidden;
+
+    /* EFFET GLOW LUMIEUX INTERNE ET EXTERNE */
+    box-shadow:
+        0 0 8px rgba(37,231,255,0.6),
+        0 0 18px rgba(37,231,255,0.35),
+        inset 0 0 10px rgba(37,231,255,0.25);
+
+    animation: hud-border-pulse 2.8s infinite ease-in-out;
+}
+
+/* AGRANDISSEMENT DU CONTENEUR DU CHART.JS "GRAPHIQUE RADAR" */
+.placeholder.graph.radar .chart-container {
+    transform: scale(1.18);
+}
+
+/* BACKGROUND TRANSLUCIDE (EFFET VITRE) DANS LE PLACEHOLDER "GRAPHIQUE RADAR" */
+.placeholder.graph.radar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(80, 200, 255, 0.08);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    z-index: 1;
+    border-radius: 18px;
+
+    animation: hud-glass-pulse 3.5s infinite ease-in-out;
+}
+
+/* CANVAS DU CHART.JS "GRAPHIQUE RADAR" - TAILLE MAXIMALE */
+#radarChart {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    z-index: 2;
+}
+
+/* PULSE GLASS DU BACKGROUND "GRAPHIQUE RADAR" */
+@keyframes hud-glass-pulse {
+    0%   { opacity: 0.65; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.65; }
+}
+
+/* ==================== CONTENEUR COMMUM CHART.JS - GRAPHIQUE POLAIRE & RADAR ==================== */
+.chart-container {
+    position: relative;
+    z-index: 2;                               
+
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+    overflow: hidden;
+
+    transform: scale(1.08);                 
+    transform-origin: center;
+}
+
 
 
