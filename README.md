@@ -133,7 +133,7 @@ Chaque graphique possède :
 |----------|------------------|
 | Anneau   | Sculpture d'Anneau à la **Place Ville-Marie** |
 | Hémisphère | **Biosphère de Montréal** |
-| Cône     | Silhouettes pointues de gratte-ciels comme la Tour **Le 1000e** |
+| Cône     | Silhouettes pointues de gratte-ciels comme la Tour **Le 1000** |
 
 La visière transforme ainsi l’architecture réelle en visualisation abstraite futuriste.
 
