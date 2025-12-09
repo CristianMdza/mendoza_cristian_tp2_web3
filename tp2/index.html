@@ -110,7 +110,53 @@
             </div>
             <!-- CARTE MAPLIBRE -->
             <div id="carte"></div>
-            <div class="placeholder slider">Slider</div>
+            <!-- CARROUSEL BOOTSTRAP -->
+            <div class="placeholder slider">
+
+                <div id="carouselSlider" class="carousel slide" 
+                        data-bs-ride="carousel" 
+                        data-bs-interval="3000" 
+                        data-bs-pause="false" 
+                        data-bs-touch="true">
+       
+                    <!-- INDICATEURS -->
+                    <div class="carousel-indicators">
+
+                        <button type="button" data-bs-target="#carouselSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Image 1"></button>
+                        <button type="button" data-bs-target="#carouselSlider" data-bs-slide-to="1" aria-label="Image 2"></button>
+                        <button type="button" data-bs-target="#carouselSlider" data-bs-slide-to="2" aria-label="Image 3"></button>
+                        <button type="button" data-bs-target="#carouselSlider" data-bs-slide-to="3" aria-label="Image 4"></button>
+                    </div>
+
+                    <!-- IMAGES -->
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img src="./assets/img/basilique_notre_dame_mtl_1280_x_720.jpg" class="d-block w-100" alt="Basilique">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./assets/img/biosphere_mtl_pixabay_1280_x_720.jpg" class="d-block w-100" alt="Biosphère">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./assets/img/clock_tower_mtl_1280_x_720.jpg" class="d-block w-100" alt="Clock Tower">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./assets/img/jardin_japonais_mtl_1280_x_720.jpg" class="d-block w-100" alt="Jardin Japonais">
+                        </div>
+
+                    </div>
+
+                    <!-- FLÈCHES HUD (Bootstrap Icons) -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlider" data-bs-slide="prev"><i class="bi bi-arrow-left-circle hud-arrow"></i></button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselSlider" data-bs-slide="next"><i class="bi bi-arrow-right-circle hud-arrow"></i></button>
+                
+                </div>
+
+            </div>
+
         </div>
 
         <!-- COLONNE À DROITE -->
@@ -151,7 +197,7 @@
     <!-- SWIPER JS -->
     <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
 
-     <script type="module" src="./src/js/swiperjs.js"></script>
+    <script type="module" src="./src/js/swiperjs.js"></script>
 
 </body>
 </html>

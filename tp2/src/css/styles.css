@@ -553,5 +553,123 @@ body::before {
     transform-origin: center;
 }
 
+/* ==================== CAROUSEL SLIDER HUD -  ==================== */
 
+/* STYLE SPÉCIFIQUE POUR LE PLACEHOLDER DU CAROUSEL SLIDER */
+.placeholder.slider {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #25e7ff;
+  border-radius: 16px;
+
+  box-shadow:
+    0 0 10px rgba(37,231,255,0.7),
+    0 0 25px rgba(37,231,255,0.35),
+    inset 0 0 15px rgba(37,231,255,0.15);
+
+  background: rgba(10,20,35,0.35);
+}
+
+/* TAILLE DU CAROUSEL ET DES ITEMS */
+.placeholder.slider .carousel,
+.placeholder.slider .carousel-inner,
+.placeholder.slider .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+/* IMAGE DANS LE CAROUSEL SLIDER */
+.placeholder.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.1) brightness(1.05) saturate(1.15);
+}
+
+/* ==================== INDICATEURS DU CAROUSEL "BOUTONS RONDS" ==================== */
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 6px;
+  z-index: 30;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgba(37,231,255,0.7);
+  box-shadow: 0 0 6px rgba(37,231,255,0.8);
+  border: none;
+  opacity: 0.8;
+}
+
+.carousel-indicators .active {
+  background-color: #8df7ff;
+  box-shadow: 0 0 10px rgba(141,247,255,1);
+  opacity: 1;
+}
+
+/* ==================== BOUTONS DE CONTRÔLE DU CAROUSEL "FLÈCHES" ==================== */
+
+/* CONTENEURS DES BOUTONS */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  width: 60px;                 
+  height: 100%;              
+  padding: 0;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  display: flex;              
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  z-index: 30;
+}
+
+/* POSITIONNEMENT DES FLÈCHES */
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+/* ==================== ICÔNES HUD ==================== */
+
+.hud-arrow {
+  font-size: 30px;
+  color: var(--hud-neon-soft);
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 0 5px rgba(37,231,255,0.8))
+    drop-shadow(0 0 12px rgba(37,231,255,0.5));
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* EFFET AU SURVOL DES FLÈCHES DE CONTRÔLE DU CAROUSEL */
+.carousel-control-prev:hover .hud-arrow,
+.carousel-control-next:hover .hud-arrow {
+  transform: scale(1.10);
+  color: #ffffff;
+
+  filter:
+    drop-shadow(0 0 10px rgba(141,247,255,1))
+    drop-shadow(0 0 22px rgba(37,231,255,1));
+}
 
