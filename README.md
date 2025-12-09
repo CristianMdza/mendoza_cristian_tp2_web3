@@ -131,9 +131,9 @@ Chaque graphique possède :
 
 | Forme 3D | Équivalent réel |
 |----------|------------------|
-| Anneau   | Sculpture de **Place Ville-Marie** |
+| Anneau   | Sculpture d'Anneau à la **Place Ville-Marie** |
 | Hémisphère | **Biosphère de Montréal** |
-| Cône     | Silhouettes pointues de gratte-ciels comme le **1000 De La Gauchetière** |
+| Cône     | Silhouettes pointues de gratte-ciels comme la Tour **Le 1000e** |
 
 La visière transforme ainsi l’architecture réelle en visualisation abstraite futuriste.
 
