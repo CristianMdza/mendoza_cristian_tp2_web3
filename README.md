@@ -1,6 +1,6 @@
 # mendoza_cristian_tp2_web3
 
-# 🎮 TP2 — Interface de visière futuriste (Web 3)
+# TP2 — Interface de visière futuriste (Web 3)
 
 **Nom :** Cristian Mendoza  
 **Cours :** Web 3 — 582311MO  
