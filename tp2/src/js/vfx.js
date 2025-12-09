@@ -1,4 +1,4 @@
-// IMPORTATION VFX-JS POUR EFFET GLITCH SUR IMAGE:
+// ==================== CODE JS DU VFX-JS POUR EFFET GLITCH SUR IMAGE ====================
 
 import { VFX } from "vfx-js";
 

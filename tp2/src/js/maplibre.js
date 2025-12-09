@@ -1,4 +1,4 @@
-// ===== IMPORTATION DE LA LIBRAIRIE MAPLIBRE-GL ET INITIALISATION DE LA CARTE GLOBE 3D =====
+// ==================== IMPORTATION DE LA LIBRAIRIE MAPLIBRE-GL ET INITIALISATION DE LA CARTE GLOBE 3D ====================
 
 import maplibregl from "maplibre-gl";
 
@@ -19,7 +19,7 @@ carte.on("style.load", () => {
 // CONTRÔLES (ZOOM - ROTATION)
 carte.addControl(new maplibregl.NavigationControl());
 
-// ANIMATION AUTOMATIQUE DE ROTATION DU GLOBE
+// ==================== ANIMATION AUTOMATIQUE DE ROTATION DU GLOBE ====================
 const speed = 15;  
 let lastTime = 0;
 

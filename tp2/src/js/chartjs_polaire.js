@@ -1,4 +1,4 @@
-// ===== CODE CHART.JS - POUR "GRAPHIQUE POLAIRE" COLONNE GAUCHE =====
+// ==================== CODE CHART.JS - POUR "GRAPHIQUE POLAIRE" COLONNE GAUCHE ====================
 
 // IMPORT LOCAL SELON DANS MON IMPORTMAP
 import Chart from "chart.js/auto";
@@ -131,7 +131,8 @@ const graphique = new Chart(canvas, {
 });
 
 
-// ANIMATION DE MISES À JOUR DES DONNÉES TOUTES LES 1.3s
+// ==================== ANIMATION DE MISES À JOUR DES DONNÉES TOUTES LES 1.3s ====================
+
 // DONNÉES DE BASE
 const baseData = [48, 22, 9, 8, 6, 7];
 

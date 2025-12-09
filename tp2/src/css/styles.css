@@ -673,3 +673,82 @@ body::before {
     drop-shadow(0 0 22px rgba(37,231,255,1));
 }
 
+/* ==================== PLACEHOLDER AUDIO TONE ==================== */
+
+/* STYLE SPÉCIFIQUE POUR LE PLACEHOLDER DU BOUTON AUDIO TONE */
+.placeholder.tone {
+    border: none;
+    border-radius: 18px;
+    transform: scale(1);
+}
+
+/* BOUTON AUDIO */
+.tone-btn {
+    all: unset;
+    cursor: pointer;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    text-align: center;
+    color: var(--hud-neon-soft);
+    font-family: 'Eurostile', sans-serif;
+
+    text-shadow:
+        0 0 6px rgba(141,247,255,0.7),
+        0 0 12px rgba(37,231,255,0.5);
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+/* ICÔNE DU BOUTON AUDIO */
+.tone-btn i {
+    font-size: 60px;
+    filter:
+        drop-shadow(0 0 6px rgba(37,231,255,0.7))
+        drop-shadow(0 0 14px rgba(37,231,255,0.4));
+}
+
+/* LABEL TEXTE */
+.tone-label {
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+/* LABEL TEXTE - PETIT */
+.tone-label small {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* EFFET AU SURVOL DU BOUTON AUDIO */
+.tone-btn.playing i {
+    filter:
+        drop-shadow(0 0 25px rgba(255,255,255,1))
+        drop-shadow(0 0 45px rgba(37,231,255,1));
+}
+
+/* ==================== INTERACTION CLICKABLE DU TONE JS ==================== */
+
+/* HOVER (SURVOL) */
+.tone-btn:hover {
+    transform: scale(1.15);
+}
+
+/* ACTIVE (CLICK ENFONCÉ) */
+.tone-btn:active {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* ENABLE POINTER EVENTS */
+.tone-btn,
+.placeholder.tone {
+    pointer-events: auto;
+}

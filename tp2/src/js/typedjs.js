@@ -1,4 +1,4 @@
-// CODE TYPEDJS POUR L'AFFICHAGE DU TEXTE ANIMÉ DANS LE HUD
+// ==================== CODE TYPEDJS POUR L'AFFICHAGE DU TEXTE ANIMÉ DANS LE HUD ====================
 
 import Typed from "typed.js";
 
@@ -14,7 +14,7 @@ Reconnaissance faciale: Activée`;
 let typedTitle = null;
 let typedData = null;
 
-/* FONCTION "LOOP" DE DÉMARRAGE DE LA SÉQUENCE TYPEDJS */
+/* ==================== FONCTION "LOOP" DE DÉMARRAGE DE LA SÉQUENCE TYPEDJS ==================== */
 
 function startSequence() {
 

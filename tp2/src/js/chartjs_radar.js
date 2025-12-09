@@ -134,7 +134,7 @@ const graphique = new Chart(canvas, {
 });
 
 
-// ANIMATION DE MISES À JOUR DES DONNÉES TOUTES LES 1s
+// ==================== ANIMATION DE MISES À JOUR DES DONNÉES TOUTES LES 1s ====================
 setInterval(() => {
   for (let ds of graphique.data.datasets) {
     for (let i = 0; i < ds.data.length; i++) {

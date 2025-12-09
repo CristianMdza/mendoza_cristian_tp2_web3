@@ -1,4 +1,4 @@
-// ===== IMPORTATION DE ZDOG (ANNEAU, HEMISPHERE ET CYLINDER) =====
+// ==================== CODE JS DE ZDOG POUR LES FORMES DE : (ANNEAU, HEMISPHERE ET CONE) ANIMÉES ====================
 
 import Zdog from "zzz";
 
