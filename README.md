@@ -30,7 +30,7 @@ L’ensemble crée une **expérience immersive de surveillance, d’analyse et d
 ## 🎨 Direction artistique
 
 **Inspiration principale**  
-- HUD et visières futuristes issues du jeu **Halo**
+- HUD et visières futuristes du jeu **Halo**
 
 **Palette de couleurs**
 - Bleu turquoise : foncé, normal, pâle  
